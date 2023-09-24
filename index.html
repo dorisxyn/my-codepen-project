@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div id="content"></div>
+  </div>
+
+  <template id="home-template">
+    <div class="page-content">
+      <h2>Welcome to the Home Page</h2>
+      <img src="https://media.istockphoto.com/vectors/artistic-jazz-night-background-in-color-vector-id660603198?k=6&m=660603198&s=612x612&w=0&h=hp-V1Ha8TD-cUCTEWqPoZ2ZjBXxUtY9hwgdUcNhfs5o=" alt="Image">
+       <div class="checkboxes-example">
+        <label for="checkbox1"><input type="checkbox" id="checkbox1"> Subscribe </label><br>
+        <div class="radio-example">
+        <label for="radio"><input type="radio" id="radio" name="radios"> Radio</label><br>
+          <div class="slider-example">
+        <label for="slider">Volum:</label>
+        <input type="range" id="slider" min="0" max="100" value="50">
+        </div>
+      </div>
+      <button onclick="navigateTo('about')">Go to About</button>
+    </div>
+  </template>
+
+  <template id="about-template">
+    <div class="page-content">
+      <h2>About Us</h2>
+      <button>Click me</button>
+      <div class="scrollbar-example">
+        <label for="scrollbar">Introduction:</label>
+        <div class="scrollbar-content" style="width: 500px; height: 20px;">
+          <p>Our Jazz Club is located in NYC. Below are our two locations</p>
+          </div>
+      <div class="checkboxes-example">
+        <label for="checkbox1"><input type="checkbox" id="checkbox1"> 30 WEST 21 ST, NY, NY, 10010</label><br>
+        <label for="checkbox2"><input type="checkbox" id="checkbox2"> 89 East 15 St, NY, NY, 10049</label><br>
+      </div>
+    </div>
+    <button onclick="navigateTo('contact')">Go to Contact</button>
+    </div>
+  </template>
+
+  <template id="contact-template">
+    <div class="page-content">
+      <h2>Contact Us</h2>
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="Enter your email">
+      <div class="slider-example">
+        <label for="slider">Slider:</label>
+        <input type="range" id="slider" min="0" max="100" value="50">
+      </div>
+      <ul>
+        <li>Our Phone Number: 800-100-3892</li>
+        <li>Our Email: jazznyc@gmail.com</li>
+      </ul>
+      <button onclick="navigateTo('about')">Go to About</button>
+    </div>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
